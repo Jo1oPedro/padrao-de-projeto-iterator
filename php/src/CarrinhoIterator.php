@@ -22,7 +22,7 @@ class CarrinhoIterator implements \Iterator
 
     public function next(): void
     {
-        $this->position++;
+        $this->position = $this->position + ($this->reverse ? -1 : 1);
     }
 
     public function key(): mixed
